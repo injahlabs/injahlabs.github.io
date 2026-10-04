@@ -1,183 +1,199 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy / Gizlilik Politikası</title>
-    <style>
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; background-color: #f8fafc; color: #1e293b; padding: 50px 20px; margin: 0; }
-        .container { max-width: 880px; margin: 0 auto; background: #ffffff; padding: 45px; border-radius: 12px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05); border: 1px solid #e2e8f0; }
-        .lang-switcher { text-align: right; margin-bottom: 30px; border-bottom: 1px solid #f1f5f9; padding-bottom: 20px; }
-        .btn-lang { background-color: #f1f5f9; border: 1px solid #e2e8f0; color: #64748b; padding: 10px 22px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer; margin-left: 8px; transition: all 0.3s ease; }
-        .btn-lang:hover { background-color: #e2e8f0; color: #334155; }
-        .btn-lang.active-tr { background-color: #2563eb; color: white; border-color: #2563eb; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
-        .btn-lang.active-en { background-color: #059669; color: white; border-color: #059669; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2); }
-        h1 { color: #0f172a; font-size: 34px; font-weight: 800; margin-top: 0; margin-bottom: 8px; text-align: center; }
-        .update-date { color: #94a3b8; font-size: 14px; text-align: center; margin-bottom: 40px; font-weight: 500; }
-        h2 { color: #0f172a; font-size: 22px; font-weight: 700; margin-top: 45px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
-        h3 { color: #475569; font-size: 16px; font-weight: 600; margin-top: 22px; margin-bottom: 6px; }
-        p { color: #334155; font-size: 15px; margin-top: 0; margin-bottom: 18px; text-align: justify; }
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy · Nireb</title>
+<meta name="description" content="Privacy Policy — Nireb (Injah Labs)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5F9;--card:#FFFFFF;--text:#16203A;--sub:#5F6A84;--line:#E2E7F0;--brand:#2A2778;--accent:#2F5BFF;--soft:#E6ECFF}
+@media (prefers-color-scheme: dark){:root{--bg:#0F1226;--card:#171B33;--text:#E8EBF5;--sub:#A3ABC4;--line:#2A3050;--brand:#B9C2FF;--accent:#8FA6FF;--soft:#232A4D}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Nunito,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.65}
+a{color:var(--accent);word-break:break-word}
+.wrap{max-width:820px;margin:0 auto;padding:20px 16px 48px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.brand{font-weight:900;color:var(--brand);text-decoration:none;font-size:15px;letter-spacing:.2px}
+.langs{display:inline-flex;background:var(--card);border:1.5px solid var(--line);border-radius:99px;padding:3px}
+.langs button{border:0;background:transparent;color:var(--sub);font:inherit;font-weight:800;font-size:13px;padding:6px 14px;border-radius:99px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--soft);color:var(--brand)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 20px}
+h1{font-size:26px;line-height:1.25;margin:0 0 6px;color:var(--text)}
+.app{color:var(--sub);font-weight:800;font-size:14px;margin:0 0 18px}
+h2{font-size:18px;margin:28px 0 8px;color:var(--brand)}
+h3{font-size:16px;margin:20px 0 6px}
+p,li{font-size:15.5px}
+ul{padding-left:22px}
+.note{font-size:13.5px;color:var(--sub);background:var(--soft);border-radius:12px;padding:10px 12px;margin:0 0 16px}
+footer{margin-top:22px;color:var(--sub);font-size:13px;text-align:center}
+[hidden]{display:none!important}
+</style>
 </head>
 <body>
-
-<div class="container">
-    <div class="lang-switcher">
-        <button id="btn-tr" class="btn-lang" onclick="switchLanguage('tr')">Türkçe</button>
-        <button id="btn-en" class="btn-lang active-en" onclick="switchLanguage('en')">English</button>
+<div class="wrap">
+  <div class="top">
+    <a class="brand" href="/">Injah Labs</a>
+    <div class="langs" role="group" aria-label="Language / Dil">
+      <button type="button" data-l="en" aria-pressed="true">English</button>
+      <button type="button" data-l="tr" aria-pressed="false">Türkçe</button>
     </div>
-
-    <!-- ==================== ENGLISH CONTENT ==================== -->
-    <div id="content-en" class="lang-content active">
-        <h1>PRIVACY POLICY</h1>
-        <div class="update-date">Last updated: October 5, 2026</div>
-
-        <h2>1. Main Heading One</h2><p>Introduction paragraph. Metin metin metin.</p>
-        <h3>1.1 Subheading One</h3><p>English text content.</p>
-        <h3>1.2 Subheading Two</h3><p>English text content.</p>
-        <h3>1.3 Subheading Three</h3><p>English text content.</p>
-
-        <h2>2. Main Heading Two</h2><p>Introduction paragraph. Metin metin metin.</p>
-        <h3>2.1 Subheading One</h3><p>English text content.</p>
-        <h3>2.2 Subheading Two</h3><p>English text content.</p>
-        <h3>2.3 Subheading Three</h3><p>English text content.</p>
-
-        <h2>3. Main Heading Three</h2><p>Introduction paragraph.</p>
-        <h3>3.1 Subheading One</h3><p>English text content.</p>
-        <h3>3.2 Subheading Two</h3><p>English text content.</p>
-        <h3>3.3 Subheading Three</h3><p>English text content.</p>
-
-        <h2>4. Main Heading Four</h2><p>Introduction paragraph.</p>
-        <h3>4.1 Subheading One</h3><p>English text content.</p>
-        <h3>4.2 Subheading Two</h3><p>English text content.</p>
-        <h3>4.3 Subheading Three</h3><p>English text content.</p>
-
-        <h2>5. Main Heading Five</h2><p>Introduction paragraph.</p>
-        <h3>5.1 Subheading One</h3><p>English text content.</p>
-        <h3>5.2 Subheading Two</h3><p>English text content.</p>
-        <h3>5.3 Subheading Three</h3><p>English text content.</p>
-
-        <h2>6. Main Heading Six</h2><p>Introduction paragraph.</p>
-        <h3>6.1 Subheading One</h3><p>English text content.</p>
-        <h3>6.2 Subheading Two</h3><p>English text content.</p>
-        <h3>6.3 Subheading Three</h3><p>English text content.</p>
-
-        <h2>7. Main Heading Seven</h2><p>Introduction paragraph.</p>
-        <h3>7.1 Subheading One</h3><p>English text content.</p>
-        <h3>7.2 Subheading Two</h3><p>English text content.</p>
-        <h3>7.3 Subheading Three</h3><p>English text content.</p>
-
-        <h2>8. Main Heading Eight</h2><p>Introduction paragraph.</p>
-        <h3>8.1 Subheading One</h3><p>English text content.</p>
-        <h3>8.2 Subheading Two</h3><p>English text content.</p>
-        <h3>8.3 Subheading Three</h3><p>English text content.</p>
-
-        <h2>9. Main Heading Nine</h2><p>Introduction paragraph.</p>
-        <h3>9.1 Subheading One</h3><p>English text content.</p>
-        <h3>9.2 Subheading Two</h3><p>English text content.</p>
-        <h3>9.3 Subheading Three</h3><p>English text content.</p>
-
-        <h2>10. Main Heading Ten</h2><p>Introduction paragraph.</p>
-        <h3>10.1 Subheading One</h3><p>English text content.</p>
-        <h3>10.2 Subheading Two</h3><p>English text content.</p>
-        <h3>10.3 Subheading Three</h3><p>English text content.</p>
-
-        <h2>11. Main Heading Eleven</h2><p>Introduction paragraph.</p>
-        <h3>11.1 Subheading One</h3><p>English text content.</p>
-        <h3>11.2 Subheading Two</h3><p>English text content.</p>
-        <h3>11.3 Subheading Three</h3><p>English text content.</p>
-
-        <h2>12. Main Heading Twelve</h2><p>Introduction paragraph.</p>
-        <h3>12.1 Subheading One</h3><p>English text content.</p>
-        <h3>12.2 Subheading Two</h3><p>English text content.</p>
-        <h3>12.3 Subheading Three</h3><p>English text content.</p>
-    </div>
-
-    <!-- ==================== TÜRKÇE İÇERİK ==================== -->
-    <div id="content-tr" class="lang-content">
-        <h1>GİZLİLİK POLİTİKASI</h1>
-        <div class="update-date">Son güncellenme: 5 Ekim 2026</div>
-
-        <h2>1. Ana Başlık Bir</h2><p>Giriş paragrafı. Türkçe metin metin.</p>
-        <h3>1.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>1.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>1.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-
-        <h2>2. Ana Başlık İki</h2><p>Giriş paragrafı. Türkçe metin metin.</p>
-        <h3>2.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>2.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>2.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-
-        <h2>3. Ana Başlık Üç</h2><p>Giriş paragrafı.</p>
-        <h3>3.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>3.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>3.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-
-        <h2>4. Ana Başlık Dört</h2><p>Giriş paragrafı.</p>
-        <h3>4.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>4.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>4.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-
-        <h2>5. Ana Başlık Beş</h2><p>Giriş paragrafı.</p>
-        <h3>5.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>5.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>5.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-
-        <h2>6. Ana Başlık Altı</h2><p>Giriş paragrafı.</p>
-        <h3>6.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>6.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>6.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-
-        <h2>7. Ana Başlık Yedi</h2><p>Giriş paragrafı.</p>
-        <h3>7.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>7.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>7.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-
-        <h2>8. Ana Başlık Sekiz</h2><p>Giriş paragrafı.</p>
-        <h3>8.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>8.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>8.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-
-        <h2>9. Ana Başlık Dokuz</h2><p>Giriş paragrafı.</p>
-        <h3>9.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>9.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>9.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-
-        <h2>10. Ana Başlık On</h2><p>Giriş paragrafı.</p>
-        <h3>10.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>10.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>10.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-
-        <h2>11. Ana Başlık On Bir</h2><p>Giriş paragrafı.</p>
-        <h3>11.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>11.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>11.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-
-        <h2>12. Ana Başlık On İki</h2><p>Giriş paragrafı.</p>
-        <h3>12.1 Alt Başlık Bir</h3><p>Türkçe metin içeriği.</p>
-        <h3>12.2 Alt Başlık İki</h3><p>Türkçe metin içeriği.</p>
-        <h3>12.3 Alt Başlık Üç</h3><p>Türkçe metin içeriği.</p>
-    </div>
+  </div>
+  <main class="card">
+    <section data-lang="en">
+      <h1>Privacy Policy</h1>
+      <p class="app">Nireb · Injah Labs</p>
+      <p class="note">This is the English translation. The Turkish version is the original text.</p>
+<h2>1. DATA CONTROLLER AND INTRODUCTION (SCOPE AND DEFINITIONS)</h2>
+<p>This Privacy Policy applies to the mobile application named Nireb, which may be published under different localized app names in different mobile app stores. Depending on the store and the target market, the application may be published on the Google Play Store, the Apple App Store and other app stores that may be used in the future under localized names such as "Nireb: Learn English", "Nireb: Kelime Kartları", "Nireb: Turkish Arabic" or similar. All of these naming variations refer to the same mobile application within the scope of this Privacy Policy, which will hereinafter be referred to as the "Application".</p>
+<p>The data controller of the Application is the independent developer Ahmet Yılmaz. "Injah Labs" may be the developer/brand name used for the Application in some app stores; however, it is not a separate company or legal entity and does not act as the data controller. Since the Application is operated by an individual developer, the legal data controller is the natural person Ahmet Yılmaz. In this Privacy Policy, the term "Application Owner" refers to the data controller, Ahmet Yılmaz.</p>
+<p>Official email address for questions about privacy, personal data, user rights, data processing or this Privacy Policy in connection with the Application: <a href="mailto:injahlabs@gmail.com">injahlabs@gmail.com</a></p>
+<p>The Application is a mobile application that does not require users to create an account and is designed to perform its core functions largely on the device. The Application has no online user account, membership or login, and no centralized database holding users' personal data.</p>
+<p>The Application is offered free of charge. It has no in-app purchases, paid memberships or subscriptions.</p>
+<h2>2. DATA AND METHODS OF COLLECTION</h2>
+<p>The Application does not use a membership or account system that requires users to enter their personal information. The optional profile name (nickname) created by the user in the Application, progress, game state, language preferences, app settings and various counters and time information used for the operation of the Application are kept in the device's local storage. This information is not transferred to any server or user database operated by the Application Owner.</p>
+<p>The core functions of the Application can be used without an internet connection; ads and certain third-party services depend on an internet connection. Operations such as tracking life refill times, technical checks against changes to the device time, daily limits on ad frequency and the interval between interstitial ads are carried out within the Application's local operating mechanisms, and the related records are kept only on the device. As part of the check against time changes, when the device is connected to the internet, the Application may send a short connection request to a server operated by Google solely to obtain the current time. No progress, nickname or other application data is sent with this request; however, as with any internet connection, the device's IP address may be visible to the relevant server during the connection.</p>
+<p>Daily reminder notifications are optional; they are scheduled on the device, shown only with the user's permission, and no data is sent for them. Words are read aloud using the device's own text-to-speech (TTS) feature, which is subject to the rules of the device's operating system or the selected voice engine. The options to rate and share the Application open the app store or the device's share menu; the content of these actions is not visible to the Application Owner.</p>
+<p>Google AdMob and Google Firebase services are used for the Application's advertising and for evaluating its technical operation. These services may automatically process certain technical data related to the device and its use through the relevant SDKs and service connections used in the Application.</p>
+<p>The Application does not ask the user for their name, surname, phone number, email address, password, contacts, photos or similar personal content. If the user voluntarily sends an email to our contact address, the email address and the information in the message may be processed to handle the communication and respond to the request.</p>
+<p>For technical error tracking and development of the Application, technical data such as device, application and operating system information, error/crash information and randomly generated identifiers specific to the app installation may be processed for the operation of the third-party services used. To understand the Application's user base and how it is used at a general level, aggregate statistics such as approximate user numbers by country, overall download and uninstall statistics and general usage rates of features may be used. These statistics are not used to directly identify a specific user.</p>
+<p>Which technical data third-party services process in their own systems, how this data is used and stored, and the choices users have regarding it are subject to the current policies and settings of the respective service providers. For details:<br>Google Privacy Policy: <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">https://policies.google.com/privacy</a><br>How Google uses information from apps that use its services: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">https://policies.google.com/technologies/partner-sites</a><br>Firebase Privacy and Security: <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">https://firebase.google.com/support/privacy</a><br>Google AdMob Privacy &amp; messaging: <a href="https://support.google.com/admob/answer/10107561" rel="noopener" target="_blank">https://support.google.com/admob/answer/10107561</a></p>
+<h2>3. PURPOSES OF PROCESSING AND LEGAL BASES</h2>
+<h3>3.1. Processing of Data on the Device</h3>
+<p>The data kept on the device by the Application is used to run the Application's core functions, preserve the user's progress in the Application, operate game features, refill lives after the set time, apply technical checks that protect the integrity of the Application against changes to the device time, and limit ad impressions so that they do not negatively affect the user experience.</p>
+<h3>3.2. Google AdMob</h3>
+<p>The ads shown in the Application are provided through the Google AdMob service. The purpose of AdMob is the technical delivery and measurement of the ads that allow the Application to be offered free of charge and, where applicable, the personalization of ads.</p>
+<p>Within this service, the device advertising ID (Android AAID / Apple IDFA), IP address, approximate location derived from the IP address (country or city level; precise location is not used), device type, operating system information and ad interaction data may be processed in order to deliver ads securely, prevent invalid clicks and measure performance. Whether ads are personalized may be determined according to the user's region, current privacy preferences and Google's rules and settings for the relevant advertising technologies.</p>
+<p>If the laws of your country or region require it, a consent screen asking for your advertising and data preferences is shown when the Application is first opened, and a "Privacy choices" section is available in the Application's Settings menu so that you can change these preferences later. Whether this screen and section are shown depends solely on the requirements of local law. On Apple devices, the tracking permission provided by the operating system (App Tracking Transparency) is requested separately. If personalized ads are not allowed, ads are shown without personalization or, in some cases, may not be shown at all; this does not affect the use of the Application. Regardless of their location, all users can reset or delete their advertising ID and turn off personalized ads in their device settings.</p>
+<p>Detailed information about these processes carried out by Google AdMob can be found in Google's current privacy and advertising policies:<br>Google Privacy Policy: <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">https://policies.google.com/privacy</a><br>Google AdMob – Personalized and non-personalized ads: <a href="https://support.google.com/admob/answer/7676680" rel="noopener" target="_blank">https://support.google.com/admob/answer/7676680</a></p>
+<h3>3.3. Google Firebase</h3>
+<p>The relevant Google Firebase services are used to evaluate the technical reliability of the Application, detect errors and understand on which devices and operating system conditions the Application experiences problems.</p>
+<p>In addition, usage data is processed to create aggregate statistics that help understand how the Application is generally used. In this context, aggregate measurements such as the approximate distribution of users across countries, the overall level of use of the Application and the usage rates of core features may be evaluated. The purpose of these statistics is not to identify a specific user but to understand general trends for developing the Application.</p>
+<p>Within Google Firebase services, device model, operating system version, app version, randomly generated identifiers specific to the app installation and temporary network data (IP) may be processed in order to detect technical errors in the Application and produce approximate country-based usage statistics. If the laws of your location require consent, usage statistics are collected according to the choice you make on the consent screen; if consent is not given, only limited data is sent, or none at all. For details:<br>Firebase Privacy and Security: <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">https://firebase.google.com/support/privacy</a></p>
+<h3>3.4. Legal Bases</h3>
+<p>Data processing carried out in connection with the Application is based on the legal grounds provided in applicable law. In particular:</p>
+<ul><li>Data kept on the device: necessary to provide the Application to the user and processed only on the device.</li><li>Delivering and measuring ads and preventing fraud: legitimate interest in offering the Application free of charge. Personalization of ads and, where required by law, storing information on or accessing information from the device: the user's explicit consent.</li><li>Usage statistics: the user's explicit consent where the law requires consent; elsewhere, legitimate interest in developing the Application.</li><li>Crash and error reports: legitimate interest in the secure and stable operation of the Application.</li><li>Emails sent by the user: responding to the request and legitimate interest.</li><li>Requests from competent authorities: compliance with legal obligations.</li></ul>
+<p>For users in Turkey, this processing is based on the legal grounds listed in Article 5 of the Personal Data Protection Law No. 6698 (KVKK) and, where required, on explicit consent.</p>
+<h2>4. DATA RETENTION, DELETION AND DESTRUCTION</h2>
+<p>Progress information, the nickname set by the user, game state, lives and refill times, ad frequency counters and similar in-app data kept in the device's local storage for the operation of the Application are stored on the device.</p>
+<p>This data is not transferred to a server or centralized database operated by the Application Owner.</p>
+<p>Users can delete the progress of the selected language pair and general app data using Settings &gt; Reset data in the Application, and can delete all local data by uninstalling the Application or clearing its data in the device's operating system settings. However, if automatic backup features offered by the device's operating system (such as Google Drive/iCloud) are enabled, deleting this data from the device's cloud backups depends on the user's own device and backup settings; these backups are managed through the user's respective account.</p>
+<p>The retention and deletion periods of data processed by Google AdMob and Google Firebase in their own systems are determined by the current policies of the respective services and the services used. For example, Firebase Crashlytics keeps crash records for a limited period (about 90 days); for Firebase Analytics, the shortest retention period offered by the service is chosen for user-level data.</p>
+<p>Emails voluntarily sent by the user and the information shared in that communication may be kept for as long as necessary to handle the communication and respond to the request.</p>
+<h2>5. SHARING DATA WITH THIRD PARTIES</h2>
+<p>The Application Owner does not sell or rent users' personal data.</p>
+<p>The Application uses third-party services such as Google AdMob and Google Firebase. These services may process certain technical or usage data through the Application in order to provide their own services. This data may be transferred to the infrastructure of the respective service providers to the extent necessary and processed for purposes such as ad delivery, measurement, analytics, security or technical error tracking. Third-party service providers are obliged to protect the transferred data in accordance with applicable law and their privacy obligations. The data processing of these services is subject to the respective providers' own policies and terms (links to the relevant privacy policies are provided in Sections 2, 3 and 5). Because of the infrastructure of the services used, data may be processed outside the user's country, for example in the United States; such international transfers are carried out in line with the safeguards provided by applicable law (for example, standard contractual clauses).</p>
+<p>If user data is requested by competent public authorities, courts or other competent bodies on a valid legal basis, information or data may be shared to the extent required by applicable law.</p>
+<p>Google Privacy Policy: <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">https://policies.google.com/privacy</a><br>Firebase Privacy and Security: <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">https://firebase.google.com/support/privacy</a><br>How Google uses information from apps that use its services: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">https://policies.google.com/technologies/partner-sites</a></p>
+<h2>6. USER RIGHTS AND PRIVACY PREFERENCES</h2>
+<p>To obtain information about your personal data or to exercise your rights under applicable law, you can contact the Application Owner at <a href="mailto:injahlabs@gmail.com">injahlabs@gmail.com</a>. Requests are answered within 30 days at the latest, depending on the nature of the request, and as a rule free of charge. Additional information may be requested to verify your identity in order to process the request.</p>
+<p>Depending on applicable law, users may have various rights regarding their personal data, such as access, rectification, erasure, restriction of processing, objection and data portability. The scope and conditions of these rights may vary according to the laws of the country or region where the user is located.</p>
+<p>Under Article 11 of the KVKK, users in Turkey have the right to learn whether and for what purpose their personal data is processed, to know the third parties to whom the data is transferred, to request its rectification, erasure or destruction and the notification of this to those third parties, to object to a result against them arising solely from automated analysis, and to claim compensation for damage caused by unlawful processing.</p>
+<p>The rights granted to users in Turkey under the Personal Data Protection Law No. 6698 (KVKK), to users in the European Economic Area under the General Data Protection Regulation (GDPR), in the United Kingdom under the UK GDPR and the Data Protection Act 2018, in Switzerland under the Federal Act on Data Protection (FADP), in the United States under applicable federal and state privacy laws, in California under the CCPA/CPRA, in Brazil under the LGPD, in China under the PIPL, in South Korea under the PIPA, in Japan under the APPI, in Canada under applicable federal and provincial privacy laws, and in Australia under the Privacy Act 1988 are reserved. In addition, rights arising from any other data protection law applicable in the user's country or region are also reserved. You also have the right to lodge a complaint with the competent data protection authority under applicable law.</p>
+<p>For data processed by third-party services, users may also use the privacy and data control tools offered by the respective service providers.</p>
+<p>Where applicable, advertising and privacy preferences can be managed through the Settings &gt; Privacy choices section of the Application (Section 3.2) or through the tools offered by the respective service providers. The options available are determined by the relevant law and the features offered by the service. Where the law provides for it, these options also include the ability to refuse personalized ads or the sharing of personal information for targeted advertising. All users can also reset or delete their advertising ID and turn off personalized ads in their device settings. Where processing requires the user's consent, consent can be withdrawn at any time through the relevant privacy options in the Application or the tools offered by the respective service provider.</p>
+<p>Requests for access, rectification or erasure regarding data processed by third-party service providers in their own systems can be made through the tools and processes offered by the respective service provider.</p>
+<h2>7. CHILDREN'S PRIVACY</h2>
+<p>The Application is not intended for and does not target children under the age of 13.</p>
+<p>The Application has no user account or registration system, and users are not required to enter personal information. The Application Owner does not knowingly request personal data from children under the age of 13.</p>
+<p>Data processing that may be carried out by third-party services during the use of the Application is subject to the respective service providers' own policies, the Application's settings and the applicable rules on children's privacy.</p>
+<p>If a different or higher age limit applies to the processing of children's personal data in the country or region where the Application is used, the provisions of the relevant local law are reserved.</p>
+<p>If a parent or legal guardian believes that their child's personal data is being processed through the Application, they can contact the Application Owner at <a href="mailto:injahlabs@gmail.com">injahlabs@gmail.com</a>. If such a situation is reported, the Application Owner will take reasonable steps to have the relevant data deleted from third-party services.</p>
+<h2>8. DATA SECURITY, GOVERNING LAW AND CHANGES</h2>
+<p>The Application has no user account or centralized personal database, and in-app data is largely kept on the device. The Application Owner applies reasonable technical and organizational measures to protect the security of data under its control. However, no method of transmission over the internet or electronic storage is completely secure.</p>
+<p>The security of data processed by third-party services is ensured within the scope of the respective service providers' own security practices and policies.</p>
+<p>This Privacy Policy has been prepared taking into account the relevant laws of the Republic of Turkey, where the Application Owner is located, and is governed by those laws. Mandatory personal data protection provisions applicable in the user's country or region are reserved.</p>
+<p>The Application Owner may update this Privacy Policy due to changes in the Application's features, the services used, applicable law or store policies. The updated Privacy Policy takes effect from the date of its publication. Significant changes will also be announced in the Application where appropriate.</p>
+<p>Last updated: October 5, 2026</p>
+      <p><a href="/nireb-v-tos/#en">Terms of Use</a></p>
+    </section>
+    <section data-lang="tr" hidden>
+      <h1>Gizlilik Politikası</h1>
+      <p class="app">Nireb · Injah Labs</p>
+      <p class="note">Bu metnin aslı Türkçedir; İngilizce sürüm çeviridir.</p>
+<h2>1. VERİ SORUMLUSU VE GİRİŞ (KAPSAM VE TANIMLAR)</h2>
+<p>Bu Gizlilik Politikası, farklı mobil uygulama mağazalarında farklı yerelleştirilmiş uygulama adlarıyla yayınlanabilen Nireb adlı mobil uygulama için geçerlidir. Uygulama; Google Play Store, Apple App Store ve ileride kullanılabilecek diğer uygulama mağazalarında, mağazaya ve hedef pazara bağlı olarak "Nireb: Learn English", "Nireb: Kelime Kartları", "Nireb: Turkish Arabic" veya benzeri yerelleştirilmiş adlarla yayınlanabilir. Bu adlandırma farklılıklarının tamamı, işbu Gizlilik Politikası kapsamında aynı mobil uygulamayı ifade eder ve bundan sonra kısaca "Uygulama" olarak anılacaktır.</p>
+<p>Uygulamanın veri sorumlusu, bağımsız geliştirici Ahmet Yılmaz'dır. "Injah Labs", uygulamanın bazı uygulama mağazalarında kullanılan geliştirici/marka adı olabilir; ancak ayrı bir şirket veya tüzel kişi değildir ve veri sorumlusu sıfatı taşımaz. Uygulamanın bireysel geliştirici tarafından işletilmesi nedeniyle, hukuki veri sorumlusu gerçek kişi olan Ahmet Yılmaz'dır. Bu Gizlilik Politikasında geçen "Uygulama Sahibi" ifadesi, veri sorumlusu Ahmet Yılmaz'ı ifade eder.</p>
+<p>Uygulama ile ilgili gizlilik, kişisel veriler, kullanıcı hakları, veri işleme süreçleri veya bu Gizlilik Politikası hakkında iletişim kurulabilecek resmi e-posta adresi: <a href="mailto:injahlabs@gmail.com">injahlabs@gmail.com</a></p>
+<p>Uygulama, kullanıcıların bir hesap oluşturmasını gerektirmeyen ve temel işlevlerini büyük ölçüde cihaz üzerinde gerçekleştirecek şekilde tasarlanmış bir mobil uygulamadır. Uygulamada çevrim içi kullanıcı hesabı, üyelik, giriş yapma veya kullanıcıların kişisel verilerini tutan merkezi bir veri tabanı bulunmamaktadır.</p>
+<p>Uygulama ücretsiz olarak sunulmaktadır. Uygulama içinde herhangi bir uygulama içi satın alma, ücretli üyelik veya abonelik bulunmamaktadır.</p>
+<h2>2. VERİLER VE VERİLERİN TOPLANMA YÖNTEMLERİ</h2>
+<p>Uygulama, kullanıcıların kişisel bilgilerini girmesini gerektiren bir üyelik veya hesap sistemi kullanmaz. Kullanıcı tarafından uygulama içerisinde isteğe bağlı olarak oluşturulan profil adı (takma ad), ilerleme durumu, oyun durumu, dil tercihleri, uygulama ayarları ve uygulamanın çalışması için kullanılan çeşitli sayaç ve zaman bilgileri cihazın yerel depolama alanında tutulur. Bu bilgiler Uygulama Sahibi tarafından işletilen herhangi bir sunucuya veya kullanıcı veri tabanına aktarılmaz.</p>
+<p>Uygulamanın temel işlevleri internet bağlantısı olmadan da kullanılabilir; reklamlar ve bazı üçüncü taraf hizmetler ise internet bağlantısına bağlı olarak çalışır. Uygulamanın cihaz üzerinde gerçekleştirdiği can yenileme sürelerinin takibi, zaman değişikliklerine karşı uygulanan teknik kontroller, reklam gösterim sıklığına ilişkin günlük sınırlar ve geçiş reklamları arasındaki süre gibi işlemler uygulamanın yerel çalışma mekanizmaları kapsamında yürütülür ve bu işlemlere ilişkin kayıtlar yalnızca cihazda tutulur. Zaman değişikliklerine karşı kontrol kapsamında, cihaz internete bağlıyken Uygulama yalnızca güncel saati öğrenmek amacıyla Google'a ait bir sunucuya kısa bir bağlantı isteği gönderebilir. Bu istekle kullanıcının ilerlemesi, takma adı veya başka bir uygulama verisi gönderilmez; ancak her internet bağlantısında olduğu gibi, cihazın IP adresi bağlantı sırasında ilgili sunucu tarafından görülebilir.</p>
+<p>Günlük hatırlatma bildirimleri isteğe bağlıdır; cihaz üzerinde planlanır, yalnızca kullanıcının izniyle gösterilir ve bunun için herhangi bir veri gönderilmez. Kelimelerin seslendirilmesi cihazın kendi metin okuma (TTS) özelliğiyle yapılır ve cihazın işletim sisteminin veya seçilen ses motorunun kurallarına tabidir. Uygulamayı değerlendirme ve paylaşma seçenekleri uygulama mağazasını veya cihazın paylaşım menüsünü açar; bu işlemlerin içeriği Uygulama Sahibi tarafından görülmez.</p>
+<p>Uygulamanın reklam hizmetleri ve uygulamanın teknik işleyişinin değerlendirilmesi için Google AdMob ve Google Firebase hizmetleri kullanılmaktadır. Bu hizmetler, uygulama içerisinde kullanılan ilgili SDK'lar ve hizmet bağlantıları aracılığıyla cihaz ve kullanım ile ilgili belirli teknik verileri otomatik olarak işleyebilir.</p>
+<p>Uygulama kullanıcıdan adı, soyadı, telefon numarası, e-posta adresi, şifre, rehber, fotoğraf veya benzeri kişisel içerikleri talep etmez. Kullanıcının kendi isteğiyle iletişim adresimize e-posta göndermesi halinde, e-posta adresi ve mesaj içeriğinde yer alan bilgiler, iletişimin yürütülmesi ve talebin yanıtlanması amacıyla işlenebilir.</p>
+<p>Uygulamanın teknik hata takibi ve geliştirilmesi kapsamında, kullanılan üçüncü taraf hizmetlerin çalışması için cihaz, uygulama, işletim sistemi, hata/çökme bilgileri ve uygulama kurulumuna özgü rastgele oluşturulmuş tanımlayıcılar gibi teknik veriler işlenebilir. Uygulamanın kullanıcı kitlesini ve kullanım biçimini genel düzeyde anlamak amacıyla ülke bazında yaklaşık kullanıcı istatistikleri, uygulamanın genel indirme ve kaldırılma istatistikleri ve özelliklerin genel kullanım oranları gibi toplu istatistiklerden yararlanılabilir. Bu istatistikler belirli bir kullanıcıyı doğrudan tanımlamak amacıyla kullanılmaz.</p>
+<p>Üçüncü taraf hizmetlerin kendi sistemlerinde hangi teknik verileri işlediği, bu verilerin nasıl kullanıldığı, saklandığı ve kullanıcıların bunlar üzerindeki seçenekleri ilgili hizmet sağlayıcıların güncel politikalarına ve ayarlarına tabidir. Ayrıntılı bilgi için:<br>Google Gizlilik Politikası: <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">https://policies.google.com/privacy</a><br>Google'ın, hizmetlerini kullanan uygulamalardan aldığı bilgileri nasıl kullandığı: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">https://policies.google.com/technologies/partner-sites</a><br>Firebase Gizlilik ve Güvenlik: <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">https://firebase.google.com/support/privacy</a><br>Google AdMob Gizlilik ve Mesajlaşma: <a href="https://support.google.com/admob/answer/10107561" rel="noopener" target="_blank">https://support.google.com/admob/answer/10107561</a></p>
+<h2>3. VERİ İŞLEME AMAÇLARI VE HUKUKİ DAYANAKLAR</h2>
+<h3>3.1. Cihaz Üzerindeki Verilerin İşlenmesi</h3>
+<p>Uygulamanın cihaz üzerinde tuttuğu veriler; uygulamanın temel işlevlerinin çalıştırılması, kullanıcının uygulamadaki ilerlemesinin korunması, oyun özelliklerinin yürütülmesi, can haklarının belirlenen süre sonunda yenilenmesi, zaman değişikliklerine karşı uygulamanın bütünlüğünü korumaya yönelik teknik kontrollerin uygulanması ve reklam gösterimlerinin kullanıcı deneyimini olumsuz etkilemeyecek şekilde sınırlandırılması amacıyla kullanılır.</p>
+<h3>3.2. Google AdMob</h3>
+<p>Uygulamada gösterilen reklamlar Google AdMob hizmeti aracılığıyla sağlanmaktadır. AdMob'un amacı, uygulamanın ücretsiz olarak sunulmasını sağlayan reklamların teknik olarak sunulması, reklamların ölçümlenmesi ve ilgili durumlarda reklamların kişiselleştirilmesidir.</p>
+<p>Bu hizmet kapsamında; reklamların güvenli bir şekilde sunulması, geçersiz tıklamaların önlenmesi ve performans ölçümü yapılabilmesi amacıyla cihaz reklam kimliği (Android AAID / Apple IDFA), IP adresi, IP adresinden belirlenen yaklaşık konum (ülke veya şehir düzeyinde; kesin konum kullanılmaz), cihaz türü, işletim sistemi bilgileri ve reklama yönelik etkileşim verileri işlenebilir. Reklamların kişiselleştirilmesi veya kişiselleştirilmemesi, kullanıcının bulunduğu bölge, mevcut gizlilik tercihleri ve Google'ın ilgili reklam teknolojilerine ilişkin kurallar ve ayarlar doğrultusunda belirlenebilir.</p>
+<p>Bulunduğunuz ülke veya bölgenin mevzuatı gerektiriyorsa, Uygulama ilk açıldığında reklam ve veri tercihlerinizi soran bir onay ekranı gösterilir ve bu tercihleri daha sonra değiştirebilmeniz için Uygulama içindeki Ayarlar menüsünde "Gizlilik seçenekleri" bölümü yer alır. Bu ekranın ve bölümün gösterilip gösterilmemesi yalnızca yerel mevzuatın gerekliliklerine bağlıdır. Apple cihazlarda, işletim sisteminin sunduğu izleme izni (App Tracking Transparency) ayrıca sorulur. Kişiselleştirilmiş reklamlara izin verilmemesi halinde reklamlar kişiselleştirilmeden gösterilir veya bazı durumlarda hiç gösterilmeyebilir; bu durum Uygulamanın kullanımını etkilemez. Bulunduğu yerden bağımsız olarak tüm kullanıcılar, cihazlarının ayarlarından reklam kimliğini sıfırlayabilir veya silebilir ve kişiselleştirilmiş reklamları kapatabilir.</p>
+<p>Google AdMob tarafından gerçekleştirilen bu süreçler hakkında ayrıntılı bilgi Google'ın güncel gizlilik ve reklam politikalarında yer almaktadır:<br>Google Gizlilik Politikası: <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">https://policies.google.com/privacy</a><br>Google AdMob – Kişiselleştirilmiş ve Kişiselleştirilmemiş Reklamlar: <a href="https://support.google.com/admob/answer/7676680" rel="noopener" target="_blank">https://support.google.com/admob/answer/7676680</a></p>
+<h3>3.3. Google Firebase</h3>
+<p>Uygulamanın teknik güvenilirliğini değerlendirmek, hataları tespit etmek ve uygulamanın hangi cihaz ve işletim sistemi koşullarında sorun yaşadığını anlamak amacıyla Google Firebase'in ilgili hizmetlerinden yararlanılmaktadır.</p>
+<p>Bunun yanında, uygulamanın genel kullanım biçimini anlamaya yönelik kullanım verileri işlenerek toplu istatistikler oluşturulmaktadır. Bu kapsamda farklı ülkelerdeki yaklaşık kullanıcı dağılımı, uygulamanın genel kullanım düzeyi ve temel özelliklerin kullanım oranları gibi toplu ölçümler değerlendirilebilir. Bu istatistiklerin amacı belirli bir kullanıcıyı tanımlamak değil, uygulamanın geliştirilmesine yönelik genel eğilimleri anlamaktır.</p>
+<p>Google Firebase hizmetleri kapsamında; uygulamanın teknik hatalarını tespit etmek ve yaklaşık ülke bazlı kullanım istatistiklerini çıkarmak amacıyla cihaz modeli, işletim sistemi sürümü, uygulama sürümü, uygulama kurulumuna özgü rastgele oluşturulmuş tanımlayıcılar ve geçici ağ verileri (IP) işlenebilir. Bulunduğunuz yerin mevzuatı onay gerektiriyorsa kullanım istatistikleri, onay ekranında yaptığınız tercihe göre toplanır; onay verilmezse yalnızca sınırlı veri gönderilir veya hiç gönderilmez. Ayrıntılı bilgi için:<br>Firebase Gizlilik ve Güvenlik: <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">https://firebase.google.com/support/privacy</a></p>
+<h3>3.4. Hukuki Dayanak</h3>
+<p>Uygulama kapsamında gerçekleştirilen veri işleme faaliyetleri, uygulanabilir mevzuatta öngörülen hukuki sebeplere dayanır. Bu kapsamda:</p>
+<ul><li>Cihaz üzerinde tutulan veriler: Uygulamanın kullanıcıya sunulabilmesi için gereklidir ve yalnızca cihazda işlenir.</li><li>Reklamların sunulması, ölçümlenmesi ve sahteciliğin önlenmesi: Uygulamanın ücretsiz sunulabilmesine yönelik meşru menfaat. Reklamların kişiselleştirilmesi ve, mevzuatın gerektirdiği yerlerde, cihazda bilgi saklanması veya cihazdaki bilgiye erişilmesi: kullanıcının açık rızası.</li><li>Kullanım istatistikleri: Mevzuatın onay gerektirdiği yerlerde kullanıcının açık rızası; diğer yerlerde Uygulamanın geliştirilmesine yönelik meşru menfaat.</li><li>Çökme ve hata raporları: Uygulamanın güvenli ve kararlı çalışmasına yönelik meşru menfaat.</li><li>Kullanıcının gönderdiği e-postalar: Talebin yanıtlanması ve meşru menfaat.</li><li>Yetkili makamların talepleri: Hukuki yükümlülüklerin yerine getirilmesi.</li></ul>
+<p>Türkiye'deki kullanıcılar bakımından bu işlemler, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 5. maddesinde sayılan hukuki sebeplere ve gerekli hallerde açık rızaya dayanır.</p>
+<h2>4. VERİ SAKLAMA, SİLME VE İMHA</h2>
+<p>Uygulamanın çalışması için cihazın yerel depolama alanında tutulan ilerleme bilgileri, kullanıcı tarafından belirlenen takma ad, oyun durumu, can hakkı ve yenilenme zamanları, reklam gösterim sıklığına ilişkin sayaçlar ve benzeri uygulama içi veriler cihaz üzerinde tutulur.</p>
+<p>Bu veriler Uygulama Sahibi tarafından işletilen bir sunucuya veya merkezi bir veri tabanına aktarılmaz.</p>
+<p>Kullanıcılar, Uygulama içindeki Ayarlar &gt; Verileri sıfırla seçeneğiyle seçili dil çiftine ait ilerlemeyi ve genel uygulama verilerini silebilir; tüm yerel verileri ise uygulamayı cihazlarından kaldırarak veya cihaz işletim sistemi ayarlarından uygulama verilerini temizleyerek silebilir. Ancak, cihazın işletim sistemi (Google Drive/iCloud vb.) tarafından sunulan otomatik yedekleme özellikleri açıksa, bu verilerin cihazın bulut yedeklerinden de silinmesi kullanıcının kendi cihaz ve yedekleme ayarlarına bağlıdır; bu yedekler kullanıcının ilgili hesabı üzerinden yönetilir.</p>
+<p>Google AdMob ve Google Firebase tarafından kendi sistemlerinde işlenen verilerin saklama ve silme süreleri, ilgili hizmetlerin güncel politikalarına ve kullanılan hizmetlere göre belirlenir. Örneğin Firebase Crashlytics çökme kayıtlarını sınırlı bir süre (yaklaşık 90 gün) saklar; Firebase Analytics için, kullanıcı düzeyindeki veriler bakımından hizmetin sunduğu en kısa saklama süresi tercih edilir.</p>
+<p>Kullanıcının kendi isteğiyle gönderdiği e-postalar ve bu iletişim kapsamında iletilen bilgiler, iletişimin yürütülmesi ve talebin yanıtlanması için gerekli olduğu sürece saklanabilir.</p>
+<h2>5. VERİLERİN ÜÇÜNCÜ TARAFLARLA PAYLAŞILMASI</h2>
+<p>Uygulama Sahibi, kullanıcıların kişisel verilerini satmaz veya kiralamaz.</p>
+<p>Uygulamada Google AdMob ve Google Firebase gibi üçüncü taraf hizmetlerden yararlanılmaktadır. Bu hizmetler, kendi hizmetlerinin sağlanması kapsamında Uygulama üzerinden belirli teknik veya kullanım verilerini işleyebilir. Bu veriler, gerekli olduğu ölçüde ilgili hizmet sağlayıcıların altyapılarına aktarılabilir ve reklamların sunulması, ölçümleme, analiz, güvenlik veya teknik hata takibi gibi amaçlarla işlenebilir. Üçüncü taraf hizmet sağlayıcılar, aktarılan verileri yürürlükteki mevzuat ve ilgili gizlilik yükümlülükleri doğrultusunda korumakla yükümlüdür. Bu hizmetlerin veri işleme süreçleri, ilgili hizmet sağlayıcıların kendi politika ve şartlarına tabidir (İlgili gizlilik politikası bağlantıları Madde 2, 3 ve 5'te yer almaktadır). Veriler, kullanılan hizmetlerin altyapıları nedeniyle kullanıcının bulunduğu ülke dışında, örneğin Amerika Birleşik Devletleri'nde, işlenebilir; bu tür uluslararası veri aktarımları, yürürlükteki mevzuatın öngördüğü koruma mekanizmaları (örneğin standart sözleşmeler) doğrultusunda gerçekleştirilir.</p>
+<p>Kullanıcı verilerinin yetkili kamu kurumları, mahkemeler veya diğer yetkili makamlar tarafından geçerli bir hukuki dayanakla talep edilmesi halinde, yürürlükteki mevzuatın gerektirdiği ölçüde bilgi veya veri paylaşımı gerçekleştirilebilir.</p>
+<p>Google Gizlilik Politikası: <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">https://policies.google.com/privacy</a><br>Firebase Gizlilik ve Güvenlik: <a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">https://firebase.google.com/support/privacy</a><br>Google'ın, hizmetlerini kullanan uygulamalardan aldığı bilgileri nasıl kullandığı: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">https://policies.google.com/technologies/partner-sites</a></p>
+<h2>6. KULLANICI HAKLARI VE GİZLİLİK TERCİHLERİ</h2>
+<p>Kişisel verilerinizle ilgili bilgi almak veya yürürlükteki mevzuat kapsamında sahip olduğunuz hakları kullanmak için <a href="mailto:injahlabs@gmail.com">injahlabs@gmail.com</a> adresinden Uygulama Sahibi'ne başvurabilirsiniz. Başvurular, talebin niteliğine göre en geç 30 gün içinde ve kural olarak ücretsiz yanıtlanır. Başvurunun değerlendirilebilmesi için kimlik doğrulamasına yönelik ek bilgi istenebilir.</p>
+<p>Uygulanabilir mevzuata göre kullanıcıların kişisel verilerine ilişkin erişim, düzeltme, silme, işlemenin sınırlandırılması, itiraz ve veri taşınabilirliği gibi çeşitli hakları bulunabilir. Bu hakların kapsamı ve uygulanma şartları, kullanıcının bulunduğu ülke veya bölgedeki mevzuata göre değişebilir.</p>
+<p>KVKK'nın 11. maddesi uyarınca Türkiye'deki kullanıcılar; kişisel verilerinin işlenip işlenmediğini ve hangi amaçla işlendiğini öğrenme, verilerin aktarıldığı üçüncü kişileri bilme, düzeltilmesini, silinmesini veya yok edilmesini ve bunun aktarılan kişilere bildirilmesini isteme, yalnızca otomatik sistemlerle yapılan analizin aleyhlerine sonucuna itiraz etme ve kanuna aykırı işleme nedeniyle uğradıkları zararın giderilmesini talep etme haklarına sahiptir.</p>
+<p>Türkiye'deki kullanıcılar bakımından 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), Avrupa Ekonomik Alanı'ndaki kullanıcılar bakımından Genel Veri Koruma Tüzüğü (GDPR), Birleşik Krallık'ta UK GDPR ve Data Protection Act 2018, İsviçre'de Federal Act on Data Protection (FADP), Amerika Birleşik Devletleri'nde uygulanabilir olduğu ölçüde ilgili federal ve eyalet gizlilik mevzuatı, Kaliforniya'da CCPA/CPRA, Brezilya'da LGPD, Çin'de PIPL, Güney Kore'de PIPA, Japonya'da APPI, Kanada'da uygulanabilir federal ve bölgesel gizlilik mevzuatı ve Avustralya'da Privacy Act 1988 kapsamında tanınan haklar saklıdır. Bunların dışında, kullanıcının bulunduğu ülke veya bölgede uygulanabilir olan diğer veri koruma mevzuatından doğan haklar da saklıdır. Ayrıca, uygulanabilir mevzuat kapsamında yetkili veri koruma makamına şikâyette bulunma hakkınız saklıdır.</p>
+<p>Üçüncü taraf hizmetler tarafından işlenen veriler bakımından kullanıcılar, ilgili hizmet sağlayıcıların sunduğu gizlilik ve veri kontrol araçlarını da kullanabilir.</p>
+<p>Reklam ve gizlilik tercihleri, uygulanabilir olduğu durumlarda Uygulama içerisindeki Ayarlar &gt; Gizlilik seçenekleri bölümü (Madde 3.2) veya ilgili hizmet sağlayıcıların sunduğu araçlar üzerinden yönetilebilir. Kullanılabilecek seçenekler, ilgili mevzuat ve hizmetin sunduğu özelliklere göre belirlenir. Mevzuatın öngördüğü yerlerde bu seçenekler, kişiselleştirilmiş reklamları veya kişisel bilgilerin hedefli reklam amacıyla paylaşılmasını reddetme imkânını da kapsar. Tüm kullanıcılar ayrıca cihazlarının ayarlarından reklam kimliğini sıfırlayabilir veya silebilir ve kişiselleştirilmiş reklamları kapatabilir. Kullanıcı onayının gerekli olduğu veri işleme faaliyetlerinde, verilen onay, uygulamadaki ilgili gizlilik seçenekleri veya ilgili hizmet sağlayıcının sunduğu araçlar üzerinden istenildiği zaman geri çekilebilir.</p>
+<p>Üçüncü taraf hizmet sağlayıcıların kendi sistemlerinde işlediği veriler bakımından erişim, düzeltme veya silme talepleri, ilgili hizmet sağlayıcının sunduğu araçlar ve süreçler üzerinden gerçekleştirilebilir.</p>
+<h2>7. ÇOCUKLARIN GİZLİLİĞİ</h2>
+<p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bu yaş grubunu hedeflemez.</p>
+<p>Uygulama içerisinde kullanıcı hesabı veya kayıt sistemi bulunmamaktadır ve kullanıcıların kişisel bilgilerini girmesi zorunlu tutulmamaktadır. Uygulama Sahibi, 13 yaşın altındaki çocuklardan bilerek kişisel veri talep etmez.</p>
+<p>Uygulamanın kullanımı sırasında üçüncü taraf hizmetler tarafından gerçekleştirilebilecek veri işleme faaliyetleri, ilgili hizmet sağlayıcıların kendi politikaları, uygulama ayarları ve yürürlükteki çocukların gizliliğine ilişkin kurallara tabidir.</p>
+<p>Uygulamanın kullanıldığı ülke veya bölgede çocukların kişisel verilerinin işlenmesine ilişkin daha farklı veya daha yüksek bir yaş sınırı uygulanıyorsa, ilgili yerel mevzuatın hükümleri saklıdır.</p>
+<p>Bir ebeveyn veya yasal vasi, çocuğuna ait kişisel verilerin Uygulama aracılığıyla işlendiğini düşündüğü bir durumla karşılaşırsa <a href="mailto:injahlabs@gmail.com">injahlabs@gmail.com</a> adresinden Uygulama Sahibi ile iletişime geçebilir. Böyle bir durumun bildirilmesi halinde Uygulama Sahibi, ilgili verilerin üçüncü taraf hizmetlerden silinmesi için makul adımları atar.</p>
+<h2>8. VERİ GÜVENLİĞİ, UYGULANACAK HUKUK VE DEĞİŞİKLİKLER</h2>
+<p>Uygulama, kullanıcı hesabı veya merkezi kişisel veri tabanı bulunmayan ve uygulama içi verilerin büyük ölçüde cihaz üzerinde tutulduğu bir yapıdadır. Uygulama Sahibi, kendi kontrolündeki verilerin güvenliğini korumak için makul teknik ve idari önlemleri uygular. Bununla birlikte, internet üzerinden yapılan hiçbir iletim veya elektronik saklama yöntemi tamamen güvenli değildir.</p>
+<p>Üçüncü taraf hizmetler tarafından işlenen verilerin güvenliği ise ilgili hizmet sağlayıcıların kendi güvenlik uygulamaları ve politikaları kapsamında sağlanır.</p>
+<p>Bu Gizlilik Politikası, Uygulama Sahibi'nin bulunduğu Türkiye Cumhuriyeti'ndeki ilgili mevzuat dikkate alınarak hazırlanmıştır ve bu mevzuata tabidir. Kullanıcının bulunduğu ülke veya bölgede uygulanması zorunlu olan kişisel verilerin korunmasına ilişkin hükümler saklıdır.</p>
+<p>Uygulama Sahibi, Uygulamanın özelliklerinde, kullanılan hizmetlerde, yürürlükteki mevzuatta veya mağaza politikalarında meydana gelen değişiklikler nedeniyle bu Gizlilik Politikası'nı güncelleyebilir. Güncellenen Gizlilik Politikası, yayınlandığı tarihten itibaren geçerli olur. Önemli değişiklikler, uygun olduğu ölçüde Uygulama içinde de duyurulur.</p>
+<p>Son Güncelleme Tarihi: 5 Ekim 2026</p>
+      <p><a href="/nireb-v-tos/#tr">Kullanım Koşulları</a></p>
+    </section>
+  </main>
+  <footer>© 2026 Injah Labs · <a href="mailto:injahlabs@gmail.com">injahlabs@gmail.com</a></footer>
 </div>
-
 <script>
-    function switchLanguage(lang) {
-        document.getElementById('content-tr').classList.remove('active');
-        document.getElementById('content-en').classList.remove('active');
-        document.getElementById('content-' + lang).classList.add('active');
-        var btnTr = document.getElementById('btn-tr');
-        var btnEn = document.getElementById('btn-en');
-        btnTr.className = 'btn-lang';
-        btnEn.className = 'btn-lang';
-        if(lang === 'tr') {
-            btnTr.classList.add('active-tr');
-        } else {
-            btnEn.classList.add('active-en');
-        }
-    }
+(function(){
+  var btns=document.querySelectorAll('.langs button');
+  function show(l){
+    document.querySelectorAll('[data-lang]').forEach(function(e){e.hidden=e.getAttribute('data-lang')!==l;});
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l?'true':'false');});
+    document.documentElement.lang=l;
+    var t=document.querySelector('[data-lang="'+l+'"] h1');
+    if(t){document.title=t.textContent+' · Nireb';}
+  }
+  var start=location.hash==='#tr'?'tr':(location.hash==='#en'?'en':((navigator.language||'').toLowerCase().indexOf('tr')===0?'tr':'en'));
+  show(start);
+  btns.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.l);history.replaceState(null,'','#'+b.dataset.l);});});
+})();
 </script>
-
 </body>
 </html>

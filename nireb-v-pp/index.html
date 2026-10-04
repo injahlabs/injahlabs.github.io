@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy / Gizlilik Politikası</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background-color: #f9f9fb; color: #333; padding: 40px 20px; margin: 0; }
+        .container { max-width: 800px; margin: 0 auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .lang-switcher { text-align: right; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .btn-lang { background-color: #e2e8f0; border: none; color: #4a5568; padding: 8px 16px; font-size: 14px; font-weight: bold; border-radius: 4px; cursor: pointer; margin-left: 5px; transition: 0.2s; }
+        .btn-lang:hover { background-color: #cbd5e0; }
+        .btn-lang.active { background-color: #3182ce; color: white; }
+        h1 { color: #2d3748; margin-top: 0; }
+        h2 { color: #4a5568; margin-top: 25px; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switcher">
+        <button class="btn-lang" onclick="switchLanguage('tr')">Türkçe</button>
+        <button class="btn-lang active" onclick="switchLanguage('en')">English</button>
+    </div>
+    <!-- İNGİLİZCE İÇERİK (İLK AÇILIŞTA AKTİF) -->
+    <div id="content-en" class="lang-content active">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: October 4, 2026</p>
+        <p>This privacy policy describes how your information is handled.</p>
+        <h2>1. Data Collection</h2>
+        <p>Our website does not collect any personal data.</p>
+    </div>
+    <!-- TÜRKÇE İÇERİK (İLK AÇILIŞTA GİZLİ) -->
+    <div id="content-tr" class="lang-content">
+        <h1>Gizlilik Politikası</h1>
+        <p>Son güncellenme: 4 Ekim 2026</p>
+        <p>Bu gizlilik politikası, verilerinizin nasıl işlendiğini açıklar.</p>
+        <h2>1. Veri Toplama</h2>
+        <p>Web sitemiz hiçbir kişisel verinizi toplamaz.</p>
+    </div>
+</div>
+<script>
+    function switchLanguage(lang) {
+        document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.btn-lang').forEach(el => el.classList.remove('active'));
+        document.getElementById('content-' + lang).classList.add('active');
+        event.target.classList.add('active');
+    }
+</script>
+</body>
+</html>

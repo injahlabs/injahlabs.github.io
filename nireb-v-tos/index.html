@@ -1,183 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service / Kullanım Koşulları</title>
-    <style>
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; background-color: #f8fafc; color: #1e293b; padding: 50px 20px; margin: 0; }
-        .container { max-width: 880px; margin: 0 auto; background: #ffffff; padding: 45px; border-radius: 12px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05); border: 1px solid #e2e8f0; }
-        .lang-switcher { text-align: right; margin-bottom: 30px; border-bottom: 1px solid #f1f5f9; padding-bottom: 20px; }
-        .btn-lang { background-color: #f1f5f9; border: 1px solid #e2e8f0; color: #64748b; padding: 10px 22px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer; margin-left: 8px; transition: all 0.3s ease; }
-        .btn-lang:hover { background-color: #e2e8f0; color: #334155; }
-        .btn-lang.active-tr { background-color: #6d28d9; color: white; border-color: #6d28d9; box-shadow: 0 4px 12px rgba(109, 40, 217, 0.2); }
-        .btn-lang.active-en { background-color: #1e3a8a; color: white; border-color: #1e3a8a; box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2); }
-        h1 { color: #0f172a; font-size: 34px; font-weight: 800; margin-top: 0; margin-bottom: 8px; text-align: center; }
-        .update-date { color: #94a3b8; font-size: 14px; text-align: center; margin-bottom: 40px; font-weight: 500; }
-        h2 { color: #0f172a; font-size: 22px; font-weight: 700; margin-top: 45px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
-        h3 { color: #475569; font-size: 16px; font-weight: 600; margin-top: 22px; margin-bottom: 6px; }
-        p { color: #334155; font-size: 15px; margin-top: 0; margin-bottom: 18px; text-align: justify; }
-        .lang-content { display: none; }
-        .lang-content.active { display: block; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nireb Terms of Use · Nireb</title>
+<meta name="description" content="Nireb Terms of Use — Nireb (Injah Labs)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5F9;--card:#FFFFFF;--text:#16203A;--sub:#5F6A84;--line:#E2E7F0;--brand:#2A2778;--accent:#2F5BFF;--soft:#E6ECFF}
+@media (prefers-color-scheme: dark){:root{--bg:#0F1226;--card:#171B33;--text:#E8EBF5;--sub:#A3ABC4;--line:#2A3050;--brand:#B9C2FF;--accent:#8FA6FF;--soft:#232A4D}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Nunito,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.65}
+a{color:var(--accent);word-break:break-word}
+.wrap{max-width:820px;margin:0 auto;padding:20px 16px 48px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.brand{font-weight:900;color:var(--brand);text-decoration:none;font-size:15px;letter-spacing:.2px}
+.langs{display:inline-flex;background:var(--card);border:1.5px solid var(--line);border-radius:99px;padding:3px}
+.langs button{border:0;background:transparent;color:var(--sub);font:inherit;font-weight:800;font-size:13px;padding:6px 14px;border-radius:99px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--soft);color:var(--brand)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 20px}
+h1{font-size:26px;line-height:1.25;margin:0 0 6px;color:var(--text)}
+.app{color:var(--sub);font-weight:800;font-size:14px;margin:0 0 18px}
+h2{font-size:18px;margin:28px 0 8px;color:var(--brand)}
+h3{font-size:16px;margin:20px 0 6px}
+p,li{font-size:15.5px}
+ul{padding-left:22px}
+.note{font-size:13.5px;color:var(--sub);background:var(--soft);border-radius:12px;padding:10px 12px;margin:0 0 16px}
+footer{margin-top:22px;color:var(--sub);font-size:13px;text-align:center}
+[hidden]{display:none!important}
+</style>
 </head>
 <body>
-
-<div class="container">
-    <div class="lang-switcher">
-        <button id="btn-tr" class="btn-lang" onclick="switchLanguage('tr')">Türkçe</button>
-        <button id="btn-en" class="btn-lang active-en" onclick="switchLanguage('en')">English</button>
+<div class="wrap">
+  <div class="top">
+    <a class="brand" href="/">Injah Labs</a>
+    <div class="langs" role="group" aria-label="Language / Dil">
+      <button type="button" data-l="en" aria-pressed="true">English</button>
+      <button type="button" data-l="tr" aria-pressed="false">Türkçe</button>
     </div>
-
-    <!-- ==================== ENGLISH CONTENT (TERMS) ==================== -->
-    <div id="content-en" class="lang-content active">
-        <h1>TERMS OF SERVICE</h1>
-        <div class="update-date">Last updated: October 5, 2026</div>
-
-        <h2>1. Acceptance of Terms</h2><p>Introduction paragraph. Metin metin metin.</p>
-        <h3>1.1 Subheading One</h3><p>English terms content.</p>
-        <h3>1.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>1.3 Subheading Three</h3><p>English terms content.</p>
-
-        <h2>2. Use of Service</h2><p>Introduction paragraph. Metin metin metin.</p>
-        <h3>2.1 Subheading One</h3><p>English terms content.</p>
-        <h3>2.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>2.3 Subheading Three</h3><p>English terms content.</p>
-
-        <h2>3. Main Heading Three</h2><p>Introduction paragraph.</p>
-        <h3>3.1 Subheading One</h3><p>English terms content.</p>
-        <h3>3.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>3.3 Subheading Three</h3><p>English terms content.</p>
-
-        <h2>4. Main Heading Four</h2><p>Introduction paragraph.</p>
-        <h3>4.1 Subheading One</h3><p>English terms content.</p>
-        <h3>4.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>4.3 Subheading Three</h3><p>English terms content.</p>
-
-        <h2>5. Main Heading Five</h2><p>Introduction paragraph.</p>
-        <h3>5.1 Subheading One</h3><p>English terms content.</p>
-        <h3>5.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>5.3 Subheading Three</h3><p>English terms content.</p>
-
-        <h2>6. Main Heading Six</h2><p>Introduction paragraph.</p>
-        <h3>6.1 Subheading One</h3><p>English terms content.</p>
-        <h3>6.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>6.3 Subheading Three</h3><p>English terms content.</p>
-
-        <h2>7. Main Heading Seven</h2><p>Introduction paragraph.</p>
-        <h3>7.1 Subheading One</h3><p>English terms content.</p>
-        <h3>7.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>7.3 Subheading Three</h3><p>English terms content.</p>
-
-        <h2>8. Main Heading Eight</h2><p>Introduction paragraph.</p>
-        <h3>8.1 Subheading One</h3><p>English terms content.</p>
-        <h3>8.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>8.3 Subheading Three</h3><p>English terms content.</p>
-
-        <h2>9. Main Heading Nine</h2><p>Introduction paragraph.</p>
-        <h3>9.1 Subheading One</h3><p>English terms content.</p>
-        <h3>9.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>9.3 Subheading Three</h3><p>English terms content.</p>
-
-        <h2>10. Main Heading Ten</h2><p>Introduction paragraph.</p>
-        <h3>10.1 Subheading One</h3><p>English terms content.</p>
-        <h3>10.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>10.3 Subheading Three</h3><p>English terms content.</p>
-
-        <h2>11. Main Heading Eleven</h2><p>Introduction paragraph.</p>
-        <h3>11.1 Subheading One</h3><p>English terms content.</p>
-        <h3>11.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>11.3 Subheading Three</h3><p>English terms content.</p>
-
-        <h2>12. Main Heading Twelve</h2><p>Introduction paragraph.</p>
-        <h3>12.1 Subheading One</h3><p>English terms content.</p>
-        <h3>12.2 Subheading Two</h3><p>English terms content.</p>
-        <h3>12.3 Subheading Three</h3><p>English terms content.</p>
-    </div>
-
-    <!-- ==================== TÜRKÇE İÇERİK (KULLANIM KOŞULLARI) ==================== -->
-    <div id="content-tr" class="lang-content">
-        <h1>KULLANIM KOŞULLARI</h1>
-        <div class="update-date">Son güncellenme: 5 Ekim 2026</div>
-
-        <h2>1. Koşulların Kabulü</h2><p>Giriş paragrafı. Türkçe metin metin.</p>
-        <h3>1.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>1.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>1.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-
-        <h2>2. Hizmet Kullanımı</h2><p>Giriş paragrafı. Türkçe metin metin.</p>
-        <h3>2.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>2.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>2.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-
-        <h2>3. Ana Başlık Üç</h2><p>Giriş paragrafı.</p>
-        <h3>3.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>3.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>3.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-
-        <h2>4. Ana Başlık Dört</h2><p>Giriş paragrafı.</p>
-        <h3>4.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>4.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>4.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-
-        <h2>5. Ana Başlık Beş</h2><p>Giriş paragrafı.</p>
-        <h3>5.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>5.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>5.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-
-        <h2>6. Ana Başlık Altı</h2><p>Giriş paragrafı.</p>
-        <h3>6.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>6.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>6.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-
-        <h2>7. Ana Başlık Yedi</h2><p>Giriş paragrafı.</p>
-        <h3>7.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>7.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>7.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-
-        <h2>8. Ana Başlık Sekiz</h2><p>Giriş paragrafı.</p>
-        <h3>8.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>8.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>8.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-
-        <h2>9. Ana Başlık Dokuz</h2><p>Giriş paragrafı.</p>
-        <h3>9.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>9.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>9.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-
-        <h2>10. Ana Başlık On</h2><p>Giriş paragrafı.</p>
-        <h3>10.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>10.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>10.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-
-        <h2>11. Ana Başlık On Bir</h2><p>Giriş paragrafı.</p>
-        <h3>11.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>11.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>11.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-
-        <h2>12. Ana Başlık On İki</h2><p>Giriş paragrafı.</p>
-        <h3>12.1 Alt Başlık Bir</h3><p>Türkçe koşul içeriği.</p>
-        <h3>12.2 Alt Başlık İki</h3><p>Türkçe koşul içeriği.</p>
-        <h3>12.3 Alt Başlık Üç</h3><p>Türkçe koşul içeriği.</p>
-    </div>
+  </div>
+  <main class="card">
+    <section data-lang="en">
+      <h1>Nireb Terms of Use</h1>
+      <p class="app">Nireb · Injah Labs</p>
+      <p class="note">This is the English translation. The Turkish version is the original text.</p>
+<p><strong>Last updated:</strong> October 5, 2026</p>
+<p>These Terms of Use set out the rules for using the Nireb mobile application (the "Application"), offered by the independent developer Ahmet Yılmaz (known in app stores as Injah Labs) and which may be published under different localized names in different stores and countries. By downloading, installing or using the Application, you agree to these terms. If you do not agree, please do not use the Application.</p>
+<h2>1. The service</h2>
+<p>Nireb is an educational application that supports learning words between Turkish, English and Arabic through lessons, flashcards, tests and a word game.</p>
+<ul><li>The Application is free and contains no in-app purchases.</li><li>The Application is supported by ads (Section 6).</li><li>The core learning features work offline. Ads and some features depend on an internet connection.</li></ul>
+<h2>2. Age requirement</h2>
+<p>The Application is designed for users aged 13 and over.</p>
+<h2>3. Rules of use</h2>
+<p>You may use the Application only for personal, non-commercial purposes. The following are prohibited:</p>
+<ul><li>copying, modifying, distributing or selling the Application or its content,</li><li>reverse engineering the Application or attempting to access its source code,</li><li>attempting to bypass ads, security measures or game rules (for example, the lives waiting time) by cheating or other means,</li><li>using the Application for any unlawful purpose,</li><li>setting a nickname (username) in the in-app profile that is obscene, profane or insulting.</li></ul>
+<p>The nickname is content chosen by the user and is visible only on the user's own device; the user is responsible for this content.</p>
+<h2>4. Content and pronunciation</h2>
+<p>Words, translations and lesson content are provided to help you learn. We take care to keep them accurate, but we do not guarantee that they are error-free or complete. Pronunciation uses your device's own text-to-speech (TTS) feature; sound quality and pronunciation depend on the device and the installed voice data. Installing the required voice data on the device is the user's responsibility; the Application can only provide guidance on this.</p>
+<h2>5. Intellectual property</h2>
+<p>The Application's name, logo, design, code and content belong to or are licensed to Ahmet Yılmaz (Injah Labs). These terms give you the right to use the Application personally; no other rights are transferred.</p>
+<h2>6. Ads and third parties</h2>
+<p>The Application shows ads through Google AdMob. Advertisers are responsible for the content of their ads, the products and services offered in them and the websites they link to. Data processing related to ads is described in our Privacy Policy.</p>
+<p>Depending on the platform from which you downloaded the Application, the terms of service of the relevant store (Google Play, Apple App Store, etc.) also apply.</p>
+<h2>7. Your data and progress</h2>
+<p>Your progress and settings are not stored in a cloud account or on a central server provided by the Application; application data is kept on the device. If you delete the Application or clear its data, the related progress may be deleted. When the "Settings &gt; Reset data" option in the Application is used, the related progress and application data are deleted and cannot be restored by the Application. The operating system's own backup and restore features may work independently of this.</p>
+<h2>8. Limitation of liability</h2>
+<p>The Application is provided "as is" and "as available". We do not guarantee that it will work without interruption or errors. To the fullest extent permitted by applicable law, we are not liable for indirect damage or loss of data arising from the use of, or inability to use, the Application. This does not affect any liability that cannot be limited by law or the mandatory rights you have as a consumer.</p>
+<h2>9. Changes to and end of the service</h2>
+<p>We may change the Application's features, add new ones, remove some, or stop offering the Application entirely. In the event of use in breach of these terms, our legal rights are reserved.</p>
+<h2>10. Governing law</h2>
+<p>These terms are governed by the laws of the Republic of Turkey. Your rights under the mandatory consumer protection laws of the country where you live are reserved.</p>
+<h2>11. Changes</h2>
+<p>We may update these terms from time to time. The current text is published on this page and the date at the top is updated. Continuing to use the Application after a change means that you accept the updated terms.</p>
+<h2>12. Contact</h2>
+<p>For any questions, feedback or support requests regarding the Application or these Terms of Use, you can contact us directly at the email address below:</p>
+<ul><li>Developer: Ahmet Yılmaz (Injah Labs)</li><li>Email: <a href="mailto:injahlabs@gmail.com">injahlabs@gmail.com</a></li></ul>
+      <p><a href="/nireb-v-pp/#en">Privacy Policy</a></p>
+    </section>
+    <section data-lang="tr" hidden>
+      <h1>Nireb Kullanım Koşulları</h1>
+      <p class="app">Nireb · Injah Labs</p>
+      <p class="note">Bu metnin aslı Türkçedir; İngilizce sürüm çeviridir.</p>
+<p><strong>Son güncelleme:</strong> 5 Ekim 2026</p>
+<p>Bu Kullanım Koşulları, bağımsız geliştirici Ahmet Yılmaz (mağazalardaki adıyla Injah Labs) tarafından sunulan ve farklı mağaza ve ülkelerde farklı yerelleştirilmiş adlarla yayınlanabilen Nireb mobil uygulamasının ("Uygulama") kullanımına ilişkin kuralları belirler. Uygulamayı indirerek, kurarak veya kullanarak bu koşulları kabul etmiş olursunuz. Kabul etmiyorsanız lütfen Uygulamayı kullanmayın.</p>
+<h2>1. Hizmet</h2>
+<p>Nireb; Türkçe, İngilizce ve Arapça arasında kelime öğrenmeyi dersler, kelime kartları, testler ve kelime oyunuyla destekleyen bir eğitim uygulamasıdır.</p>
+<ul><li>Uygulama ücretsizdir ve uygulama içi satın alma içermez.</li><li>Uygulama reklamlarla desteklenir (Bölüm 6).</li><li>Temel öğrenme özellikleri internetsiz çalışır. Reklamlar ve bazı özellikler internet bağlantısına bağlı olarak çalışır.</li></ul>
+<h2>2. Yaş sınırı</h2>
+<p>Uygulama 13 yaş ve üzerindeki kullanıcılar için tasarlanmıştır.</p>
+<h2>3. Kullanım kuralları</h2>
+<p>Uygulamayı yalnızca kişisel ve ticari olmayan amaçlarla kullanabilirsiniz. Şunlar yasaktır:</p>
+<ul><li>Uygulamayı veya içeriğini kopyalamak, değiştirmek, dağıtmak ya da satmak,</li><li>tersine mühendislik yapmak veya kaynak koduna erişmeye çalışmak,</li><li>reklamları, güvenlik önlemlerini veya oyun kurallarını (örneğin can bekleme süresini) hile ya da başka yollarla atlatmaya çalışmak,</li><li>Uygulamayı yasalara aykırı bir amaçla kullanmak,</li><li>uygulama içi profil alanında genel ahlaka aykırı, küfürlü veya hakaret içerikli bir takma ad (kullanıcı adı) belirlemek.</li></ul>
+<p>Takma ad, kullanıcının kendi belirlediği içeriktir ve yalnızca kullanıcının cihazında görünür; bu içerikten doğan sorumluluk kullanıcıya aittir.</p>
+<h2>4. İçerik ve seslendirme</h2>
+<p>Kelimeler, çeviriler ve ders içerikleri öğrenmeye yardımcı olmak amacıyla sunulur. Doğru olmaları için özen gösteririz, ancak hatasız veya eksiksiz olduklarını garanti etmeyiz. Seslendirme, cihazınızın kendi metin okuma (TTS) özelliğiyle yapılır; ses kalitesi ve telaffuz cihaza ve yüklü ses paketine göre değişir. Gerekli ses paketlerinin cihaza kurulması kullanıcıya aittir; Uygulama bu konuda yalnızca yönlendirme yapabilir.</p>
+<h2>5. Fikri mülkiyet</h2>
+<p>Uygulamanın adı, logosu, tasarımı, kodu ve içeriği Ahmet Yılmaz'a (Injah Labs) aittir veya Ahmet Yılmaz'a (Injah Labs) lisanslanmıştır. Bu koşullar size Uygulamayı kişisel olarak kullanma hakkı verir; bunun dışında hiçbir hak devredilmez.</p>
+<h2>6. Reklamlar ve üçüncü taraflar</h2>
+<p>Uygulamada Google AdMob aracılığıyla reklamlar gösterilir. Reklamların içeriğinden, reklamlarda sunulan ürün ve hizmetlerden ve reklamların yönlendirdiği sitelerden ilgili reklam verenler sorumludur. Reklamlarla ilgili veri işleme, Gizlilik Politikamızda açıklanmıştır.</p>
+<p>Uygulamayı indirdiğiniz platforma göre, ilgili mağazanın (Google Play, Apple App Store vb.) kendi hizmet şartları da geçerlidir.</p>
+<h2>7. Verileriniz ve ilerlemeniz</h2>
+<p>İlerlemeniz ve ayarlarınız Uygulama tarafından sağlanan bir bulut hesabı veya merkezi sunucu üzerinde saklanmaz; uygulama verileri cihaz üzerinde tutulur. Uygulamayı silmeniz veya uygulama verilerini temizlemeniz durumunda ilgili ilerleme silinebilir. Uygulama içerisindeki "Ayarlar &gt; Verileri sıfırla" seçeneği kullanıldığında, ilgili ilerleme ve uygulama verileri silinir ve Uygulama tarafından geri getirilemez. İşletim sistemlerinin kendi yedekleme ve geri yükleme özellikleri bu durumdan ayrı olarak çalışabilir.</p>
+<h2>8. Sorumluluğun sınırlandırılması</h2>
+<p>Uygulama "olduğu gibi" ve "mevcut olduğu şekliyle" sunulur. Uygulamanın kesintisiz veya hatasız çalışacağını garanti etmeyiz. Yürürlükteki mevzuatın izin verdiği en geniş ölçüde, Uygulamanın kullanılmasından veya kullanılamamasından doğan dolaylı zararlardan ve veri kaybından sorumlu değiliz. Bu hüküm, kanunen sınırlandırılamayan sorumlulukları ve tüketici olarak sahip olduğunuz emredici hakları etkilemez.</p>
+<h2>9. Hizmette değişiklik ve sona erme</h2>
+<p>Uygulamanın özelliklerini değiştirebilir, yenilerini ekleyebilir, bazılarını kaldırabilir veya Uygulamanın sunumunu tamamen sona erdirebiliriz. Bu koşullara aykırı kullanım halinde yasal haklarımız saklıdır.</p>
+<h2>10. Uygulanacak hukuk</h2>
+<p>Bu koşullar Türkiye Cumhuriyeti hukukuna tabidir. Bulunduğunuz ülkenin tüketiciyi koruyan emredici hükümlerinden doğan haklarınız saklıdır.</p>
+<h2>11. Değişiklikler</h2>
+<p>Bu koşulları zaman zaman güncelleyebiliriz. Güncel metin bu sayfada yayımlanır ve en üstteki tarih değiştirilir. Değişiklikten sonra Uygulamayı kullanmaya devam etmeniz, güncel koşulları kabul ettiğiniz anlamına gelir.</p>
+<h2>12. İletişim</h2>
+<p>Uygulama veya Kullanım Koşulları ile ilgili her türlü soru, görüş ve destek talepleriniz için doğrudan aşağıdaki e-posta adresi üzerinden iletişim kurabilirsiniz:</p>
+<ul><li>Geliştirici: Ahmet Yılmaz (Injah Labs)</li><li>E-posta: <a href="mailto:injahlabs@gmail.com">injahlabs@gmail.com</a></li></ul>
+      <p><a href="/nireb-v-pp/#tr">Gizlilik Politikası</a></p>
+    </section>
+  </main>
+  <footer>© 2026 Injah Labs · <a href="mailto:injahlabs@gmail.com">injahlabs@gmail.com</a></footer>
 </div>
-
 <script>
-    function switchLanguage(lang) {
-        document.getElementById('content-tr').classList.remove('active');
-        document.getElementById('content-en').classList.remove('active');
-        document.getElementById('content-' + lang).classList.add('active');
-        var btnTr = document.getElementById('btn-tr');
-        var btnEn = document.getElementById('btn-en');
-        btnTr.className = 'btn-lang';
-        btnEn.className = 'btn-lang';
-        if(lang === 'tr') {
-            btnTr.classList.add('active-tr');
-        } else {
-            btnEn.classList.add('active-en');
-        }
-    }
+(function(){
+  var btns=document.querySelectorAll('.langs button');
+  function show(l){
+    document.querySelectorAll('[data-lang]').forEach(function(e){e.hidden=e.getAttribute('data-lang')!==l;});
+    btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===l?'true':'false');});
+    document.documentElement.lang=l;
+    var t=document.querySelector('[data-lang="'+l+'"] h1');
+    if(t){document.title=t.textContent+' · Nireb';}
+  }
+  var start=location.hash==='#tr'?'tr':(location.hash==='#en'?'en':((navigator.language||'').toLowerCase().indexOf('tr')===0?'tr':'en'));
+  show(start);
+  btns.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.l);history.replaceState(null,'','#'+b.dataset.l);});});
+})();
 </script>
-
 </body>
 </html>
